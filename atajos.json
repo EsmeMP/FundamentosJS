@@ -1,0 +1,49 @@
+[
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus",
+        "args": {
+            "description": "Seleccionar la siguiente ocurrencia de una palabra"
+        }
+    },
+    {
+        "key": "ctrl+f",
+        "command": "actions.find",
+        "when": "editorFocus",
+        "args": {
+            "description": "Buscar"
+        }
+    },
+    {
+        "key": "ctrl+h",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus",
+        "args": {
+            "description": "Buscar y Reemplazar"
+        }
+    },
+    {
+        "key": "ctrl+shift+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "editorFocus",
+        "args": {
+            "description": "Eliminar línea completa"
+        }
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "args": {
+            "description": "Abrir la terminal integrada"
+        }
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "editor.action.changeAll",
+        "when": "editorFocus",
+        "args": {
+            "description": "Seleccionar todo el texto de una misma palabra"
+        }
+    }
+]
