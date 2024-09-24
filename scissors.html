@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel y Tijeras</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            /* border: 2px solid #fff; */
+            padding: 30px;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .jugar {
+            grid-area: 1 / 3 / 2 / 4;
+            padding-bottom: 10px;
+        }
+
+        .divUser {
+            grid-area: 2 / 2 / 3 / 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .divUser h3 {
+            margin: 0;
+        }
+
+        .divUser img {
+            width: 150px;
+            height: auto;
+        }
+
+        .divMaq {
+            grid-area: 3 / 3 / 4 / 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* Añade espacio entre los elementos */
+        }
+
+        .resultado {
+            grid-area: 4 / 3 / 5 / 4;
+        }
+
+        img {
+            width: 150px; /* Tamaño de las imágenes */
+            height: auto;
+        }
+    </style>
+</head>
+<body class="parent"></body>
+    <div class="jugar">
+        <h1>Jugar</h1>
+    </div>
+    <div class="divUser">
+        <h3>Tu seleccionaste: </h3>
+        <img src="" alt="" id="imgUser">
+        <h2 id="userEleccion"></h2>
+    </div>
+    <div class="divMaq">
+        <h3>La Maquina seleccionó: </h3>
+        <img src="" alt="" id="imgCompu">
+        <h2 id="maqEleccion"></h2>
+    </div>
+    <div class="resultado">
+        <h3>Resultado</h3>
+        <h2 id="resultadoFinal"></h2>
+    </div>
+    <script src="./scissors.js"></script>
+</body>
+</html>
+
+<!-- css grid generator -->
+<!-- flexbox frogy -->
+<!-- class grid garden -->
