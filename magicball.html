@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+    <style>
+        :root {
+            --color-container: #a19e97;
+            --color-letra: #1d1111 ;
+            --color-body:#e0e6e6;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            place-items: center;
+            background-color: var(--color-body);
+        }
+
+        .bola{
+            color: var(--color-letra);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid var(--color-letra);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: var(--color-container);
+        }
+        .flechas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .flechas img {
+            width: 55px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="bola">
+        <h1>Bola Magica</h1>
+    </div>
+    <div class="flechas">
+        <a href="./index.html"><img src="./assets/img/izquierda.png" alt="flecha"></a>
+        <a href="./scissors.html"><img src="./assets/img/derecha.png" alt=""></a>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

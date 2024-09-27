@@ -1,37 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos JavaScript</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            display: grid;
-            width: 100vw;
-            height: 100vh;
-            place-items: center;
+
+        :root {
+            --color-container: #ffdbd3;
+            --color-letra: #333333 ;
+            --color-body: #D7D7D7;
         }
 
-        div {
-            color: aliceblue;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 1px solid black;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background: #000;
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background:var(--color-body);
         }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .div1 {
+            grid-area: 1 / 1 / 3 / 6;
+            text-align: center;
+            padding: 50px;
+            width: 100vw;
+            height: 150px;
+            background:var(--color-container);
+        }
+
+        .div1 h1 {
+            color: var(--color-letra);
+            font-size: 3rem;
+        }
+
+        .div2 {
+            grid-area: 3 / 3 / 4 / 4;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+        }
+        .div2 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 10px;
+            margin-left: 150px;
+        }
+
+        .div3 {
+            grid-area:4 / 2 / 5 / 5;;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .div1 h1{
+            color: var(--color-letra);
+            font-size: 3rem;
+        }
+
+        .div3 a {
+            border: var(--color-letra) solid 2px;
+            background-color: var(--color-container);
+            color: var(--color-letra);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
     </style>
 </head>
-<body>
-    <div>
-        <h1>Bola Magica</h1>
+<body class="parent">
+    <div class="div1">
+        <h1>Fundamentos de JavaScript</h1>
     </div>
-    <script src="./app.js"></script>
+    <div class="div2">
+        <img src="./assets/img/javascript.jpg" alt="iamgen-redonda">
+    </div>
+    <div class="div3">
+        <a href="./magicball.html">Bola Mágica</a>
+        <a href="./scissors.html">Piedra, Papel y Tijeras</a>
+    </div>
 </body>
 </html>

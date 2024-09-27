@@ -34,13 +34,13 @@ const play = (choiceUser) => {
     userChoiceText.innerText = choiceUser;
     switch (choiceUser) {
         case 'piedra':
-            imgUser.src = 'assets/img/piedra.png'; // Cambiar imagen del usuario
+            imgUser.src = 'assets/img/piedra.png';
             break;
         case 'papel':
-            imgUser.src = 'assets/img/papel.png'; // Cambiar imagen del usuario
+            imgUser.src = 'assets/img/papel.png';
             break;
         case 'tijeras':
-            imgUser.src = 'assets/img/tijeras.png'; // Cambiar imagen del usuario
+            imgUser.src = 'assets/img/tijeras.png';
             break;
     }
 
@@ -53,13 +53,12 @@ const play = (choiceUser) => {
         (choiceUser === 'tijeras' && choiceMaq === 'papel')
     )
     {
-        message.innerText = 'Has Ganado';
+        message.innerText = '🥳  Has Ganado!! 🥳';
     }
     else{
-        message.innerText = 'Has Perdido';
+        message.innerText = '😓 Has Perdido 😓';
     }
 }
-
 // divUser.forEach(userEleccion => {
 //     userEleccion.addEventListener('click', function() {
 //         const eleccionUsuario = this.id;
@@ -69,7 +68,6 @@ const play = (choiceUser) => {
 btnPlay.addEventListener('click', function() {
     const eleccionUsuario = prompt('Elige: piedra, papel o tijeras').toLowerCase();
 
-    // Verificar si la elección del usuario es válida
     if (eleccionUsuario === 'piedra' || eleccionUsuario === 'papel' || eleccionUsuario === 'tijeras') {
         play(eleccionUsuario);
     } else {
